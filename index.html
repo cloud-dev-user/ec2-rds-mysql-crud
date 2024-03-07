@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Employee list</title>
+</head>
+<body>
+	<!-- Add employee link to the form -->
+	<a th:href="@{/employeeForm}">Add Employee</a>
+	<!-- Employee list -->
+	<table>
+	<thead>
+		<tr>
+			<th> Employee ID</th>			
+			<th> First Name</th>
+			<th> Last Name</th>
+		</tr>
+	</thead>
+	<tbody>
+		 <tr th:each="tempEmployee : ${employee}">
+			<td th:text="${tempEmployee.empId}">
+		 	<td th:text="${tempEmployee.firstName}">
+		 	<td th:text="${tempEmployee.lastName}">			
+		 </tr> 
+	</tbody>	
+	</table>
+</body>
+</html>
