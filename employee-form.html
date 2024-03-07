@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Employee Form</title>
+</head>
+<body>		
+	<form th:action="@{/addEmployee}" method="post" th:object="${employee}" role="form">
+		<input type="text"  id ="empId" placeholder="Employee Id" th:field="*{empId}">
+		<input type="text" placeholder="First Name" autofocus="autofocus" th:field="*{firstName}">
+		<input type="text" placeholder="Last Name" autofocus="autofocus" th:field="*{lastName}">
+		<button type="submit" name="submit" id="submit">Save</button>
+	</form>
+</body>
+</html>
